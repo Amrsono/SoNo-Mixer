@@ -19,7 +19,6 @@ const Waveform: React.FC<WaveformProps> = ({ url, isRecording }) => {
                 cursorColor: '#ffffff',
                 barWidth: 2,
                 barRadius: 3,
-                responsive: true,
                 height: 120,
             });
 

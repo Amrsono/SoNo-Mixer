@@ -1,0 +1,2 @@
+src/components/Waveform.tsx(22,17): error TS2353: Object literal may only specify known properties, and 'responsive' does not exist in type 'WaveSurferOptions'.
+src/main.tsx(3,17): error TS5097: An import path can only end with a '.tsx' extension when 'allowImportingTsExtensions' is enabled.
