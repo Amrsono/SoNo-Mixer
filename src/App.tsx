@@ -359,7 +359,7 @@ function App() {
                         </section>
 
                         {/* 3rd Channel (Mic) & Decks */}
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1fr_auto_auto_1fr] gap-2 sm:gap-4 items-center transition-all">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1fr_auto_auto_1fr] gap-4 items-center flex-shrink-0 transition-all">
                             {/* Deck A */}
                             <div className={`p-3 sm:p-6 rounded-2xl sm:rounded-3xl border transition-all ${selectedDeck === 'A' ? backgroundTheme === 'light' ? 'bg-orange-100 border-orange-400' : 'bg-orange-500/10 border-orange-500' : backgroundTheme === 'light' ? 'bg-white/70 border-gray-300' : 'bg-zinc-900/50 border-zinc-800'}`} onClick={() => setSelectedDeck('A')}>
                                 <div className="flex justify-between items-center mb-2 sm:mb-4">
@@ -398,8 +398,8 @@ function App() {
                                 </div>
                             </div>
 
-                            {/* Mic Channel (3rd Fader) - Hidden on small screens */}
-                            <div className={`hidden lg:flex flex-col items-center gap-2 p-4 rounded-3xl border transition-all ${backgroundTheme === 'light'
+                            {/* Mic Channel (3rd Fader) */}
+                            <div className={`flex flex-col items-center gap-2 p-4 rounded-3xl border transition-all lg:order-2 order-3 ${backgroundTheme === 'light'
                                 ? 'bg-white/70 border-gray-300'
                                 : 'bg-zinc-900/30 border-zinc-800/50'
                                 }`}>
@@ -429,8 +429,8 @@ function App() {
                                 </button>
                             </div>
 
-                            {/* Crossfader - Hidden on small screens */}
-                            <div className="hidden lg:flex flex-col items-center gap-2">
+                            {/* Crossfader */}
+                            <div className="flex flex-col items-center gap-2 lg:order-3 order-4">
                                 <span className={`text-[10px] font-black rotate-90 ${backgroundTheme === 'light' ? 'text-gray-600' : 'text-zinc-500'}`}>FADE</span>
                                 <div className={`h-48 w-12 rounded-full border flex items-center justify-center relative py-4 ${backgroundTheme === 'light'
                                     ? 'bg-gray-200 border-gray-400'
@@ -450,7 +450,7 @@ function App() {
                             </div>
 
                             {/* Deck B */}
-                            <div className={`p-3 sm:p-6 rounded-2xl sm:rounded-3xl border transition-all ${selectedDeck === 'B' ? backgroundTheme === 'light' ? 'bg-red-100 border-red-400' : 'bg-red-500/10 border-red-500' : backgroundTheme === 'light' ? 'bg-white/70 border-gray-300' : 'bg-zinc-900/50 border-zinc-800'}`} onClick={() => setSelectedDeck('B')}>
+                            <div className={`p-3 sm:p-6 rounded-2xl sm:rounded-3xl border transition-all lg:order-4 order-2 ${selectedDeck === 'B' ? backgroundTheme === 'light' ? 'bg-red-100 border-red-400' : 'bg-red-500/10 border-red-500' : backgroundTheme === 'light' ? 'bg-white/70 border-gray-300' : 'bg-zinc-900/50 border-zinc-800'}`} onClick={() => setSelectedDeck('B')}>
                                 <div className="flex justify-between items-center mb-2 sm:mb-4">
                                     <span className="text-[10px] sm:text-xs font-black uppercase text-red-500 tracking-tighter">Deck B</span>
                                     {isLoading.B && <div className="w-3 h-3 sm:w-4 sm:h-4 border-2 border-red-500 border-t-transparent rounded-full animate-spin"></div>}
