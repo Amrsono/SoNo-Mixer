@@ -256,8 +256,6 @@ function App() {
                                 className={`w-full p-4 rounded-2xl border-2 transition-all text-left font-bold ${
                                     backgroundTheme === 'light'
                                         ? 'border-orange-500 bg-orange-500/10 text-gray-900'
-                                        : backgroundTheme === 'light'
-                                        ? 'border-gray-300 bg-gray-50 text-gray-900 hover:bg-gray-100'
                                         : 'border-zinc-700 bg-zinc-800 hover:bg-zinc-700'
                                 }`}
                             >
@@ -287,7 +285,7 @@ function App() {
             {/* Toast Notification */}
             {showExportToast && (
                 <div className="fixed top-8 left-1/2 -translate-x-1/2 z-50 bg-white text-black px-6 py-3 rounded-full font-bold shadow-2xl animate-bounce flex items-center gap-2">
-                    <Download size={18} /> MIXDOWN DOWNLOADED
+                    <Download className="w-[18px] h-[18px]" /> MIXDOWN DOWNLOADED
                 </div>
             )}
 
@@ -321,7 +319,7 @@ function App() {
                             ? 'bg-gray-200 border border-gray-300 hover:bg-gray-300 text-gray-600 hover:text-gray-900'
                             : 'bg-zinc-900 border border-zinc-800 hover:bg-zinc-800 text-zinc-400 hover:text-white'
                     }`}>
-                        <Settings size={18} />
+                        <Settings className="w-[18px] h-[18px]" />
                     </button>
                 </div>
             </header>
@@ -393,7 +391,7 @@ function App() {
                             </div>
                             <div className="flex flex-col gap-2 sm:gap-4">
                                 <div className="flex items-center gap-2">
-                                    <Volume2 size={10} sm:size={12} className="text-zinc-500 flex-shrink-0" />
+                                    <Volume2 className="w-[10px] h-[10px] sm:w-[12px] sm:h-[12px] text-zinc-500 flex-shrink-0" />
                                     <input
                                         type="range"
                                         min="0"
@@ -409,7 +407,7 @@ function App() {
                                         ? backgroundTheme === 'light' ? 'bg-gray-400 text-white' : 'bg-zinc-800 text-white'
                                         : backgroundTheme === 'light' ? 'bg-orange-500 text-white hover:bg-orange-600' : 'bg-white text-black hover:bg-gray-100'
                                 }`}>
-                                    {isPlayingA ? <Pause size={14} sm:size={18} /> : <Play size={14} sm:size={18} />} {isPlayingA ? "STOP" : "PLAY A"}
+                                    {isPlayingA ? <Pause className="w-[14px] h-[14px] sm:w-[18px] sm:h-[18px]" /> : <Play className="w-[14px] h-[14px] sm:w-[18px] sm:h-[18px]" />} {isPlayingA ? "STOP" : "PLAY A"}
                                 </button>
                             </div>
                         </div>
@@ -489,7 +487,7 @@ function App() {
                             </div>
                             <div className="flex flex-col gap-2 sm:gap-4">
                                 <div className="flex items-center gap-2">
-                                    <Volume2 size={10} sm:size={12} className={`flex-shrink-0 ${backgroundTheme === 'light' ? 'text-gray-600' : 'text-zinc-500'}`} />
+                                    <Volume2 className={`w-[10px] h-[10px] sm:w-[12px] sm:h-[12px] flex-shrink-0 ${backgroundTheme === 'light' ? 'text-gray-600' : 'text-zinc-500'}`} />
                                     <input
                                         type="range"
                                         min="0"
@@ -505,7 +503,7 @@ function App() {
                                         ? backgroundTheme === 'light' ? 'bg-gray-400 text-white' : 'bg-zinc-800 text-white'
                                         : backgroundTheme === 'light' ? 'bg-red-500 text-white hover:bg-red-600' : 'bg-white text-black hover:bg-gray-100'
                                 }`}>
-                                    {isPlayingB ? <Pause size={14} sm:size={18} /> : <Play size={14} sm:size={18} />} {isPlayingB ? "STOP" : "PLAY B"}
+                                    {isPlayingB ? <Pause className="w-[14px] h-[14px] sm:w-[18px] sm:h-[18px]" /> : <Play className="w-[14px] h-[14px] sm:w-[18px] sm:h-[18px]" />} {isPlayingB ? "STOP" : "PLAY B"}
                                 </button>
                             </div>
                         </div>
@@ -522,7 +520,7 @@ function App() {
                                 backgroundTheme === 'light'
                                     ? 'bg-gray-400 text-white hover:bg-gray-500'
                                     : 'bg-zinc-800 text-white hover:bg-zinc-700'
-                            }`}><Upload size={12} sm:size={14} /> UPLOAD</button>
+                            }`}><Upload className="w-[12px] h-[12px] sm:w-[14px] sm:h-[14px]" /> UPLOAD</button>
                             <input type="file" ref={fileInputRef} onChange={handleFileUpload} className="hidden" accept="audio/*" />
                         </div>
 
